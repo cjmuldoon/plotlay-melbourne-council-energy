@@ -1,0 +1,50 @@
+table Months
+	lineageTag: ef831a7b-0206-8907-4c3d-f21c36dfc3c0
+
+	column month_start
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: 61f09fbd-13f8-9151-dc8e-baf753991f77
+		summarizeBy: none
+		sourceColumn: month_start
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: string
+		lineageTag: c026b354-acc3-d4ee-391c-2745812844dd
+		summarizeBy: none
+		sourceColumn: month
+		sortByColumn: month_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_order
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: d80ac0f8-e0b7-24e7-0a41-3f15c8a06b5b
+		summarizeBy: none
+		sourceColumn: month_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column season
+		dataType: string
+		lineageTag: c69c2010-5d91-982e-2853-6fc72bebac89
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Months = m
+		mode: import
+		source =
+				let
+				    Starts = List.Transform({0..11}, each Date.AddMonths(#date(2013, 7, 1), _)),
+				    Rows = List.Transform(Starts, each {_, Date.ToText(_, "MMM yyyy", "en-AU"), Date.Year(_) * 100 + Date.Month(_), if List.Contains({12, 1, 2}, Date.Month(_)) then "Summer" else if List.Contains({3, 4, 5}, Date.Month(_)) then "Autumn" else if List.Contains({6, 7, 8}, Date.Month(_)) then "Winter" else "Spring"}),
+				    Source = #table(type table [month_start = date, month = text, month_order = Int64.Type, season = text], Rows)
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

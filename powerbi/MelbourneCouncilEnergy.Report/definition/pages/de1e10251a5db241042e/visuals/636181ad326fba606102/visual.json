@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "636181ad326fba606102",
+  "position": {
+    "x": 1540,
+    "y": 110,
+    "z": 1,
+    "height": 140,
+    "width": 340,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Assets"
+                    }
+                  },
+                  "Property": "Assets with no register location"
+                }
+              },
+              "queryRef": "Assets.Assets with no register location",
+              "nativeQueryRef": "Assets with no register location"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Assets with no location in the register'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

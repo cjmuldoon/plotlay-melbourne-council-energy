@@ -1,0 +1,52 @@
+table Usage
+	lineageTag: c6451870-4ce0-c0d5-501a-45763f464276
+
+	column asset_name
+		dataType: string
+		isHidden
+		lineageTag: 77c6c5bb-8f86-e762-d24b-16ecb1060c6d
+		summarizeBy: none
+		sourceColumn: asset_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column measure
+		dataType: string
+		isHidden
+		lineageTag: 8d21c108-0b83-e00b-8e6c-773315d511da
+		summarizeBy: none
+		sourceColumn: measure
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_start
+		dataType: dateTime
+		formatString: mmm yyyy
+		isHidden
+		lineageTag: b8aeccba-8f1f-8b94-6cd1-9ee41a14786f
+		summarizeBy: none
+		sourceColumn: month_start
+
+		annotation SummarizationSetBy = Automatic
+
+	column amount
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 4ddb77a4-d815-abbd-981a-68c104406ab1
+		summarizeBy: none
+		sourceColumn: amount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Usage = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(GetFile("usage/usage_monthly.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Kept = Table.SelectColumns(Promoted, {"asset_name", "measure", "month_start", "amount"}),
+				    Typed = Table.TransformColumnTypes(Kept, {{"asset_name", type text}, {"measure", type text}, {"month_start", type date}, {"amount", type number}}, "en-AU")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

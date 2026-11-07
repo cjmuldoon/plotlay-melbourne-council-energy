@@ -1,0 +1,175 @@
+{
+  "name": "Plotlay drafting film",
+  "dataColors": [
+    "#1d4f91",
+    "#cf3b26",
+    "#2f9e8a",
+    "#d9a21b",
+    "#8a5fb5"
+  ],
+  "background": "#f2efe6",
+  "secondaryBackground": "#ebe7da",
+  "foreground": "#1f2a37",
+  "foregroundNeutralSecondary": "#5b6573",
+  "foregroundNeutralTertiary": "#8a929c",
+  "backgroundLight": "#faf8f1",
+  "backgroundNeutral": "#ebe7da",
+  "tableAccent": "#1d4f91",
+  "good": "#2f9e8a",
+  "neutral": "#d9a21b",
+  "bad": "#cf3b26",
+  "maximum": "#6b1a10",
+  "center": "#e0714a",
+  "minimum": "#f8dcc6",
+  "null": "#cfcac0",
+  "textClasses": {
+    "title": {
+      "fontFace": "IBM Plex Sans Condensed",
+      "fontSize": 16,
+      "color": "#163c6e"
+    },
+    "header": {
+      "fontFace": "IBM Plex Sans Condensed",
+      "fontSize": 13,
+      "color": "#163c6e"
+    },
+    "label": {
+      "fontFace": "IBM Plex Sans",
+      "fontSize": 10,
+      "color": "#1f2a37"
+    },
+    "callout": {
+      "fontFace": "IBM Plex Sans Condensed",
+      "fontSize": 32,
+      "color": "#163c6e"
+    },
+    "largeTitle": {
+      "fontFace": "IBM Plex Sans Condensed",
+      "fontSize": 22,
+      "color": "#163c6e"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#faf8f1"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#a9b8cf"
+              }
+            },
+            "radius": 0
+          }
+        ],
+        "visualHeader": [
+          {
+            "foreground": {
+              "solid": {
+                "color": "#1d4f91"
+              }
+            },
+            "background": {
+              "solid": {
+                "color": "#faf8f1"
+              }
+            }
+          }
+        ],
+        "title": [
+          {
+            "fontFamily": "IBM Plex Sans Condensed",
+            "fontColor": {
+              "solid": {
+                "color": "#163c6e"
+              }
+            },
+            "fontSize": 14,
+            "bold": true
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#f2efe6"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "fontFamily": "IBM Plex Sans Condensed",
+            "color": {
+              "solid": {
+                "color": "#163c6e"
+              }
+            }
+          }
+        ],
+        "categoryLabels": [
+          {
+            "fontFamily": "IBM Plex Sans",
+            "color": {
+              "solid": {
+                "color": "#5b6573"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "lineChart": {
+      "*": {
+        "lineStyles": [
+          {
+            "strokeWidth": 2
+          }
+        ],
+        "gridlines": [
+          {
+            "color": {
+              "solid": {
+                "color": "#d8dde6"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "clusteredBarChart": {
+      "*": {
+        "gridlines": [
+          {
+            "color": {
+              "solid": {
+                "color": "#d8dde6"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

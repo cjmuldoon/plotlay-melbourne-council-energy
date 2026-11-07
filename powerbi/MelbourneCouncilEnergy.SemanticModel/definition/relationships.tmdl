@@ -1,0 +1,11 @@
+relationship 3f90971e-dc6e-2416-3887-104d5072bb20
+	fromColumn: Usage.asset_name
+	toColumn: Assets.asset_name
+
+relationship fafa8c3c-0d1b-6560-315c-8181543de541
+	fromColumn: Usage.month_start
+	toColumn: Months.month_start
+
+relationship 7987e3bb-a742-a795-b7d4-329530ce1c87
+	fromColumn: Usage.measure
+	toColumn: Measures.measure

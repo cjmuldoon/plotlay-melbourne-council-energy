@@ -1,0 +1,15 @@
+/// The folder the data is read from: the public GitHub copy of the repo's data/ folder (ends with a slash), or a local
+/// folder such as \\Mac\Home\plotlay-melbourne-council-energy\data\ (ends with a backslash). Home, Transform data, Edit parameters.
+expression DataFolder = "https://raw.githubusercontent.com/cjmuldoon/plotlay-melbourne-council-energy/main/data/" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: f3c58aa5-55c9-a9f8-d443-553b72045466
+
+	annotation PBI_ResultType = Text
+
+/// A file of the data folder, from the web or from disk
+expression GetFile =
+		(name as text) as binary =>
+		    if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder, [RelativePath = name]) else File.Contents(DataFolder & name)
+	lineageTag: 9f15dd65-f923-1c22-9123-71584b0d390e
+
+	annotation PBI_ResultType = Function
+

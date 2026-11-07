@@ -1,0 +1,16 @@
+model Model
+	culture: en-AU
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-AU
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DataFolder","GetFile","Assets","Usage","Months","Measures"]
+
+ref table Assets
+ref table Usage
+ref table Months
+ref table Measures
+
+ref cultureInfo en-AU

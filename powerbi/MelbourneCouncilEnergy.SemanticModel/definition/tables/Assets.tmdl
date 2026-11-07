@@ -1,0 +1,269 @@
+table Assets
+	lineageTag: 9aedeaf1-f77b-8642-abe5-28503b8c5de8
+
+	/// The usage of the one measure picked (electricity kWh, gas MJ or water kL). Blank when more than one is picked: measures are never added together
+	measure Amount = IF ( HASONEVALUE ( Measures[measure] ), SUM ( Usage[amount] ) )
+		formatString: #,0
+		lineageTag: 5c264d98-1b71-9ca3-e044-6b6cb6882c34
+
+	measure Unit = SELECTEDVALUE ( Measures[unit], "pick one measure" )
+		lineageTag: 247c3a12-4bbf-1bcb-5cfb-522081be4d09
+
+	measure 'Electricity kWh' = CALCULATE ( SUM ( Usage[amount] ), Measures[measure] = "Electricity" )
+		formatString: #,0
+		displayFolder: By measure
+		lineageTag: a8c4c3ed-7f32-5905-8cf9-6297e852776e
+
+	measure 'Gas MJ' = CALCULATE ( SUM ( Usage[amount] ), Measures[measure] = "Gas" )
+		formatString: #,0
+		displayFolder: By measure
+		lineageTag: d3b6267d-cdb0-6ff9-be62-b6760205f183
+
+	measure 'Water kL' = CALCULATE ( SUM ( Usage[amount] ), Measures[measure] = "Water" )
+		formatString: #,0
+		displayFolder: By measure
+		lineageTag: 94a33ed3-941a-7ca8-3138-5fc1fa049eeb
+
+	/// The shape area from Plotlay (parcel or 2023 footprint)
+	measure 'Area m2' = SUM ( Assets[area_m2] )
+		formatString: #,0
+		displayFolder: Per area
+		lineageTag: 32284125-9a79-01b3-eff3-9d609e378754
+
+	/// Footprint x floors above ground (CLUE 2014): an estimate
+	measure 'Floor m2 estimated' = SUM ( Assets[floor_m2_est] )
+		formatString: #,0
+		displayFolder: Per area
+		lineageTag: 8604ac86-13f0-f607-23cf-022686bc59eb
+
+	/// Grid electricity over estimated floor area
+	measure 'kWh per m2 floor' = DIVIDE ( [Electricity kWh], [Floor m2 estimated] )
+		formatString: #,0
+		displayFolder: Per area
+		lineageTag: 566dbb19-71ef-a2cc-bd2b-699a9b9e4db3
+
+	/// Water as a depth over the council parcel, parcels only
+	measure 'Water mm' = DIVIDE ( CALCULATE ( [Water kL], Assets[property_id] > 0 ), CALCULATE ( [Area m2], Assets[property_id] > 0 ) ) * 1000
+		formatString: #,0
+		displayFolder: Per area
+		lineageTag: a254f192-1100-1733-1ffb-dac3deaf6dff
+
+	/// December to February over June to August
+	measure 'Water summer over winter' = DIVIDE ( CALCULATE ( [Water kL], Months[season] = "Summer" ), CALCULATE ( [Water kL], Months[season] = "Winter" ) )
+		formatString: 0.0
+		displayFolder: Season
+		lineageTag: 2303faf4-a9b8-1b3c-b55b-b2f670e1088a
+
+	measure 'Assets placed' = CALCULATE ( COUNTROWS ( Assets ), Assets[placed] = TRUE () )
+		formatString: 0
+		displayFolder: Mapping
+		lineageTag: 11eb0ccd-fada-3e90-6a8c-a85c4559ce5a
+
+	measure 'Assets with no register location' = CALCULATE ( COUNTROWS ( Assets ), Assets[register_position] IN { "none", "not in register" } )
+		formatString: 0
+		displayFolder: Mapping
+		lineageTag: 5a3bfe63-070d-4f79-012b-39ea36df29c4
+
+	/// Drill-through page title
+	measure 'Asset title' = SELECTEDVALUE ( Assets[asset_name], "Pick an asset" ) & ", " & SELECTEDVALUE ( Assets[address], "" )
+		lineageTag: 7b4cfda8-5a76-0a19-b969-a3607ff24d9c
+
+	column asset_name
+		dataType: string
+		lineageTag: eed866bf-1fdb-547c-0138-cda14780cb47
+		summarizeBy: none
+		sourceColumn: asset_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column asset_type
+		dataType: string
+		lineageTag: 11900ba6-e561-f6f0-4362-8b9dfb8dc610
+		summarizeBy: none
+		sourceColumn: asset_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: fd2910b6-581b-2d21-ab02-692889f7f334
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column address
+		dataType: string
+		lineageTag: 31a3429e-c456-910f-1514-7351f9e9523d
+		summarizeBy: none
+		sourceColumn: address
+
+		annotation SummarizationSetBy = Automatic
+
+	column suburb
+		dataType: string
+		lineageTag: ddc4e236-f48e-fc44-2d2e-818e7cc54213
+		summarizeBy: none
+		sourceColumn: suburb
+
+		annotation SummarizationSetBy = Automatic
+
+	column register_position
+		dataType: string
+		lineageTag: 57ad02e7-88f4-d3b9-c5c7-cbe6cb0e67d9
+		summarizeBy: none
+		sourceColumn: register_position
+
+		annotation SummarizationSetBy = Automatic
+
+	column placed
+		dataType: boolean
+		lineageTag: d95aeb27-3528-1327-0b04-b3ee5dbe7352
+		summarizeBy: none
+		sourceColumn: placed
+
+		annotation SummarizationSetBy = Automatic
+
+	column shape_basis
+		dataType: string
+		lineageTag: d1da2c05-fccd-26b3-c45f-a06c5cf468d5
+		summarizeBy: none
+		sourceColumn: shape_basis
+
+		annotation SummarizationSetBy = Automatic
+
+	column source
+		dataType: string
+		lineageTag: 4fd03dec-98de-68bf-08c1-37ea529e18bd
+		summarizeBy: none
+		sourceColumn: source
+
+		annotation SummarizationSetBy = Automatic
+
+	column structure_id
+		dataType: string
+		lineageTag: 747cfe06-2339-d4f2-7188-9bc61bd112b9
+		summarizeBy: none
+		sourceColumn: structure_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column property_id
+		dataType: double
+		formatString: 0
+		lineageTag: 1e80e552-78e0-97c9-102c-667e2175eea8
+		summarizeBy: none
+		sourceColumn: property_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column parts
+		dataType: double
+		formatString: 0
+		lineageTag: dbc1791d-4e57-de75-06da-8f8fe044e688
+		summarizeBy: none
+		sourceColumn: parts
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_m2
+		dataType: double
+		formatString: #,0
+		lineageTag: 38d13520-45e5-68f1-df5c-7a661ecfd191
+		summarizeBy: none
+		sourceColumn: area_m2
+
+		annotation SummarizationSetBy = Automatic
+
+	column length_m
+		dataType: double
+		formatString: #,0
+		lineageTag: c664e903-01f3-8f19-4a09-5e3e5620cb81
+		summarizeBy: none
+		sourceColumn: length_m
+
+		annotation SummarizationSetBy = Automatic
+
+	column floors
+		dataType: double
+		formatString: 0
+		lineageTag: af2a6a38-4b8f-c4d5-e7d5-e5ad976d0ff6
+		summarizeBy: none
+		sourceColumn: floors
+
+		annotation SummarizationSetBy = Automatic
+
+	column floor_m2_est
+		dataType: double
+		formatString: #,0
+		lineageTag: ebb872be-c3c6-83b1-95c7-83308812127a
+		summarizeBy: none
+		sourceColumn: floor_m2_est
+
+		annotation SummarizationSetBy = Automatic
+
+	column water_mm
+		dataType: double
+		formatString: #,0
+		lineageTag: ed5c021c-aa61-7303-18d9-cd665144a9f5
+		summarizeBy: none
+		sourceColumn: water_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column centroid_lat
+		dataType: double
+		lineageTag: c6643fba-b72e-f2ec-657c-cac8de45b5ec
+		summarizeBy: none
+		sourceColumn: centroid_lat
+		dataCategory: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column centroid_lng
+		dataType: double
+		lineageTag: c8b1e1c8-a10f-0a3c-e050-92fea87d65e3
+		summarizeBy: none
+		sourceColumn: centroid_lng
+		dataCategory: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column electricity_days_billed
+		dataType: double
+		formatString: 0
+		lineageTag: 7b119059-f6c4-309c-f4a7-145ef20ddfbb
+		summarizeBy: none
+		sourceColumn: electricity_days_billed
+
+		annotation SummarizationSetBy = Automatic
+
+	column water_days_billed
+		dataType: double
+		formatString: 0
+		lineageTag: 0ed7eeaa-6812-a489-4d64-cfc888e91a1e
+		summarizeBy: none
+		sourceColumn: water_days_billed
+
+		annotation SummarizationSetBy = Automatic
+
+	column shape_note
+		dataType: string
+		lineageTag: 726e0b96-20a7-f3a4-361d-354847074b93
+		summarizeBy: none
+		sourceColumn: shape_note
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Assets = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(GetFile("assets/assets.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Kept = Table.SelectColumns(Promoted, {"asset_name", "asset_type", "category", "address", "suburb", "register_position", "placed", "shape_basis", "source", "structure_id", "property_id", "parts", "area_m2", "length_m", "floors", "floor_m2_est", "water_mm", "centroid_lat", "centroid_lng", "electricity_days_billed", "water_days_billed", "shape_note"}),
+				    Typed = Table.TransformColumnTypes(Kept, {{"asset_name", type text}, {"asset_type", type text}, {"category", type text}, {"address", type text}, {"suburb", type text}, {"register_position", type text}, {"placed", type logical}, {"shape_basis", type text}, {"source", type text}, {"structure_id", type text}, {"property_id", type number}, {"parts", type number}, {"area_m2", type number}, {"length_m", type number}, {"floors", type number}, {"floor_m2_est", type number}, {"water_mm", type number}, {"centroid_lat", type number}, {"centroid_lng", type number}, {"electricity_days_billed", type number}, {"water_days_billed", type number}, {"shape_note", type text}}, "en-AU")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

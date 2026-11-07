@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "eec28ae4aa2f29b56522",
+  "position": {
+    "x": 1180,
+    "y": 110,
+    "z": 1,
+    "height": 900,
+    "width": 700,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Assets"
+                    }
+                  },
+                  "Property": "asset_name"
+                }
+              },
+              "queryRef": "Assets.asset_name",
+              "nativeQueryRef": "asset_name"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Assets"
+                    }
+                  },
+                  "Property": "Water kL"
+                }
+              },
+              "queryRef": "Assets.Water kL",
+              "nativeQueryRef": "Water kL"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Assets"
+                    }
+                  },
+                  "Property": "Water summer over winter"
+                }
+              },
+              "queryRef": "Assets.Water summer over winter",
+              "nativeQueryRef": "Water summer over winter"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Assets"
+                    }
+                  },
+                  "Property": "water_days_billed"
+                }
+              },
+              "queryRef": "Assets.water_days_billed",
+              "nativeQueryRef": "water_days_billed"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Water, summer over winter (days billed in the year)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

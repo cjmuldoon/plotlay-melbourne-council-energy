@@ -1,0 +1,109 @@
+asset_name,measure,bills,days_covered,days_twice,max_overlap,identical_bills,zero_bills,first,last,gap_days_in_fy
+Administration - 602 Little Bourke Street Storage,Electricity,12,365,0,1,0,0,2013-07-01,2014-06-30,0
+Administration - 602 Little Bourke Street Storage,Water,4,313,0,1,0,1,2013-05-10,2014-05-09,52
+Administration - Council House 1,Electricity,12,365,0,1,0,0,2013-07-01,2014-06-30,0
+Administration - Council House 1,Gas,7,365,0,1,0,0,2013-06-19,2014-06-30,0
+Administration - Council House 1,Water,6,365,0,1,0,0,2013-05-11,2014-06-30,0
+Administration - Council House 2,Electricity,12,365,0,1,0,0,2013-07-01,2014-06-30,0
+Administration - Council House 2,Gas,7,365,0,1,0,0,2013-06-19,2014-06-30,0
+Administration - Council House 2,Water,6,365,0,1,0,0,2013-05-11,2014-06-30,0
+Administration - Melbourne Town Hall,Electricity,25,365,365,3,0,0,2013-05-16,2014-08-13,0
+Administration - Melbourne Town Hall,Gas,7,365,0,1,0,0,2013-06-19,2014-06-30,0
+Administration - Melbourne Town Hall,Water,6,365,0,1,0,0,2013-05-11,2014-06-30,0
+Arts Centre - Meat Market,Electricity,17,365,365,2,0,0,2013-06-08,2014-06-30,0
+Arts Centre - Meat Market,Gas,7,365,0,1,0,0,2013-05-29,2014-07-28,0
+Arts Centre - Meat Market,Water,4,259,0,1,0,0,2013-05-15,2014-06-30,106
+Arts Centre - Nth Melb Town Hall,Electricity,13,365,86,2,0,0,2013-06-29,2014-06-30,0
+Arts Centre - Nth Melb Town Hall,Gas,8,365,0,1,0,0,2013-05-28,2014-06-30,0
+Arts Centre - Nth Melb Town Hall,Water,6,365,0,1,0,0,2013-05-10,2014-06-30,0
+Boulevard - Flemington Road,Water,59,365,365,7,0,8,2013-05-07,2014-06-30,0
+Boulevard - Royal Parade,Water,45,365,352,8,0,18,2012-11-03,2014-06-30,0
+Boulevard - St Kilda Road,Electricity,3,198,0,1,0,0,2013-06-18,2014-01-14,167
+Boulevard - St Kilda Road,Water,54,365,365,9,0,16,2013-04-25,2014-06-30,0
+Boulevard - Victoria Parade,Water,13,365,365,2,0,5,2013-05-14,2014-06-30,0
+Community Centre - Docklands Hub,Electricity,5,365,0,1,0,0,2013-06-13,2014-06-30,0
+Community Centre - North Melbourne,Electricity,10,365,365,2,0,0,2013-06-12,2014-06-30,0
+Community Centre - North Melbourne,Water,6,365,0,1,0,0,2013-05-07,2014-06-30,0
+Community Centre - Southbank,Electricity,33,365,365,4,0,0,2013-05-22,2014-08-15,0
+Community Centre - Southbank,Gas,8,365,0,1,0,0,2013-06-26,2014-06-30,0
+Garden - Carlton South,Electricity,24,365,365,2,0,0,2013-07-01,2014-06-30,0
+Garden - Carlton South,Water,15,365,335,2,0,0,2013-07-01,2014-06-30,0
+Garden - Fitzroy,Electricity,29,365,365,4,0,0,2013-04-04,2014-08-11,0
+Garden - Fitzroy,Water,6,365,0,1,0,0,2013-05-12,2014-06-30,0
+Garden - Flagstaff,Water,6,365,0,1,0,0,2013-05-08,2014-06-30,0
+Garden - Queen Victoria,Electricity,7,365,158,2,0,0,2013-06-15,2014-06-30,0
+Garden - Queen Victoria,Water,12,365,365,2,0,0,2013-05-08,2014-06-30,0
+Garden - Treasury,Water,10,365,116,2,0,0,2013-05-10,2014-06-30,0
+Garden Alexandra,Electricity,28,365,365,3,0,11,2012-03-16,2014-06-30,0
+Garden Alexandra,Water,20,365,365,3,0,0,2013-05-08,2014-06-30,0
+Information - Federation Square Centre,Electricity,12,365,0,1,0,0,2013-07-01,2014-06-30,0
+Information - Parking Signage Network,Electricity,7,215,0,1,0,0,2013-07-01,2014-01-31,150
+Lease - 225 Bourke St - City Village,Electricity,12,365,0,1,0,0,2013-07-01,2014-06-30,0
+Lease - 225 Bourke St - City Village,Gas,14,365,365,2,0,7,2013-06-19,2014-06-30,0
+Lease - 225 Bourke St - City Village,Water,6,365,0,1,0,0,2013-05-11,2014-06-30,0
+Lease - Batman Park Heliport Office,Water,6,365,0,1,0,0,2013-05-09,2014-06-30,0
+Lease - Campbell Arcade,Electricity,12,365,0,1,0,0,2013-07-01,2014-06-30,0
+Lease - Campbell Arcade,Water,6,365,0,1,0,0,2013-05-11,2014-06-30,0
+Lease - Car Park City Square,Electricity,12,365,0,1,0,0,2013-07-01,2014-06-30,0
+Lease - Car Park City Square,Water,17,365,365,2,0,8,2013-05-11,2014-06-30,0
+Lease - Car Park Elgin Street,Electricity,12,365,0,1,0,0,2013-07-01,2014-06-30,0
+Lease - Event Supply - Swanston Street,Electricity,21,365,365,3,0,0,2013-05-08,2014-06-30,0
+Lease - Fitzroy Gardens Pavilion Cafe,Water,12,365,365,2,0,0,2013-05-10,2014-06-30,0
+Lease - Marina Ye,Electricity,9,243,20,2,0,0,2013-07-01,2014-02-28,122
+Lease - Marina Ye,Water,5,269,0,1,0,0,2013-04-25,2014-06-30,96
+Lease - Melbourne Town Hall,Electricity,11,365,0,1,0,0,2013-07-01,2014-06-30,0
+Lease - Melbourne Town Hall,Gas,7,365,0,1,0,0,2013-06-19,2014-06-30,0
+Lease - Melbourne Town Hall,Water,6,365,0,1,0,0,2013-05-11,2014-06-30,0
+Lease - Multicultural Hub,Electricity,19,365,195,2,0,0,2013-07-01,2014-06-30,0
+Lease - Multicultural Hub,Gas,8,365,0,1,0,0,2013-05-10,2014-06-30,0
+Lease - Multicultural Hub,Water,16,365,348,2,0,0,2012-11-15,2014-06-30,0
+Library - City,Electricity,13,365,0,1,0,0,2013-07-01,2014-06-30,0
+Library - East Melbourne,Electricity,13,365,0,1,0,0,2013-06-26,2014-06-30,0
+Library - East Melbourne,Water,10,365,0,1,0,0,2013-05-10,2014-06-30,0
+Library - North Melbourne,Electricity,26,365,365,2,0,0,2013-06-25,2014-06-30,0
+Library - North Melbourne,Gas,2,114,0,1,0,1,2013-12-03,2014-03-26,251
+Library - North Melbourne,Water,6,365,0,1,0,0,2013-05-10,2014-06-30,0
+Park - Birrarung Marr,Electricity,13,365,0,1,0,0,2013-06-27,2014-06-30,0
+Park - Birrarung Marr,Water,18,365,365,3,0,0,2013-05-10,2014-06-30,0
+Park - Fawkner,Electricity,18,365,365,2,0,5,2013-05-06,2014-06-30,0
+Park - Fawkner,Water,12,365,365,2,0,0,2013-05-08,2014-06-30,0
+Park - JJ Holland,Electricity,5,365,0,1,0,0,2013-06-16,2014-06-30,0
+Park - JJ Holland,Water,6,365,0,1,0,0,2013-05-04,2014-06-30,0
+Park - Kings Domain,Electricity,28,365,365,5,0,6,2013-04-20,2014-06-30,0
+Park - Kings Domain,Water,12,365,365,2,0,0,2013-05-08,2014-06-30,0
+Park - Parliament,Electricity,13,365,0,1,0,0,2013-06-27,2014-06-30,0
+Park - Parliament,Water,6,211,0,1,0,0,2013-07-01,2014-05-13,154
+Park - Princes Park,Electricity,34,365,365,4,0,0,2013-04-04,2014-06-30,0
+Park - Princes Park,Water,44,365,365,5,0,0,2013-05-03,2014-06-30,0
+Park - Royal Park,Electricity,64,365,365,10,0,1,2013-04-10,2014-07-07,0
+Park - Royal Park,Water,55,365,365,8,0,17,2013-02-09,2014-06-30,0
+Park - Shrine,Electricity,10,335,0,1,0,0,2013-06-27,2014-05-31,30
+Park - Shrine,Water,11,365,365,2,0,0,2013-05-08,2014-06-30,0
+Parking Meters - Melbourne Network,Electricity,8,243,0,1,0,2,2013-07-01,2014-02-28,122
+Recreation Centre - City Baths,Electricity,16,365,114,2,0,0,2013-06-23,2014-06-30,0
+Recreation Centre - City Baths,Gas,12,365,0,1,0,0,2013-07-01,2014-06-30,0
+Recreation Centre - City Baths,Water,6,365,0,1,0,0,2013-05-08,2014-06-30,0
+Recreation Centre - North Melbourne,Electricity,51,365,365,4,0,0,2013-06-26,2014-06-30,0
+Recreation Centre - North Melbourne,Gas,10,335,0,1,0,0,2013-06-29,2014-05-31,30
+Recreation Centre - North Melbourne,Water,6,365,0,1,0,0,2013-05-08,2014-06-30,0
+Reserve - Buncle Street,Water,6,365,0,1,0,0,2013-05-07,2014-06-30,0
+Reserve - Darling Square,Electricity,8,365,0,1,0,0,2013-05-15,2014-06-30,0
+Reserve - Darling Square,Water,6,365,0,1,0,3,2013-05-10,2014-06-30,0
+Reserve - Jolimont,Water,6,365,0,1,0,0,2013-05-14,2014-06-30,0
+Reserve - Lincoln Square,Electricity,7,365,0,1,0,0,2013-04-03,2014-06-30,0
+Reserve - Lincoln Square,Water,6,365,0,1,0,0,2013-05-09,2014-06-30,0
+Reserve - Point Park,Water,22,365,365,2,0,0,2013-04-27,2014-06-30,0
+Reserve - Powlett,Water,6,365,0,1,0,0,2013-05-14,2014-06-30,0
+Reserve - Southbank Promenade,Electricity,8,284,0,1,0,1,2013-07-01,2014-04-10,81
+Reserve - Southbank Promenade,Water,35,365,365,4,0,6,2013-04-25,2014-06-30,0
+Security Cameras - Melbourne Network,Electricity,20,365,365,3,0,4,2013-05-08,2014-06-30,0
+Sports Pavilion - Fawkner Park South,Electricity,5,365,0,1,0,0,2013-06-16,2014-06-30,0
+Sports Pavilion - Fawkner Park South,Gas,8,365,0,1,0,0,2013-05-30,2014-06-30,0
+Sports Pavilion - Fawkner Park South,Water,6,365,0,1,0,0,2013-05-08,2014-06-30,0
+Street Lighting - Docklands Network,Electricity,402,365,365,54,0,20,2013-04-09,2014-08-01,0
+Street Lighting - Melbourne Network,Electricity,376,365,365,47,0,27,2013-03-31,2014-08-08,0
+Street Reserve - Alexandra Avenue,Water,16,365,365,2,0,10,2013-05-08,2014-06-30,0
+Street Reserve - Investigator Drive,Water,6,365,0,1,0,0,2013-05-14,2014-06-30,0
+Street Reserve - Miscellaneous,Electricity,8,245,168,2,0,0,2013-10-15,2014-06-16,120
+Street Reserve - Miscellaneous,Water,561,365,365,104,0,99,2012-08-11,2014-06-30,0
+Toilets - Collins Street Town Hall,Water,6,365,0,1,0,0,2013-05-11,2014-06-30,0

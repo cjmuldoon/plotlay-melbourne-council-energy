@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "3a72d2e8bf47e29f11c4",
+  "position": {
+    "x": 40,
+    "y": 1030,
+    "z": 99,
+    "height": 40,
+    "width": 1840,
+    "tabOrder": 99
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Bills (FY 2013-14: 1 July 2013 to 30 June 2014), asset register, 2023 building footprints, property boundaries and road corridors: City of Melbourne Open Data, CC BY 4.0. Shapes made in Plotlay (getplotlay.com) from those layers. Bills spread over their days in Plotlay. Electricity, gas and water are never added together. Floor area is an estimate.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "#5b6573"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

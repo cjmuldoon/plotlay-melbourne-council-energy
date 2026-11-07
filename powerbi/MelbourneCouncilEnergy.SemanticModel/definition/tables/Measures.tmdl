@@ -1,0 +1,28 @@
+table Measures
+	lineageTag: 4807de9a-c38e-9fdd-bbc0-9156010c27ff
+
+	column measure
+		dataType: string
+		lineageTag: 252488f5-0b58-0e97-6c16-ffd973073947
+		summarizeBy: none
+		sourceColumn: measure
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit
+		dataType: string
+		lineageTag: 0ddf51a2-f943-b191-7230-1bc3e8c95276
+		summarizeBy: none
+		sourceColumn: unit
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Measures = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [measure = text, unit = text], {{"Electricity", "kWh"}, {"Gas", "MJ"}, {"Water", "kL"}})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

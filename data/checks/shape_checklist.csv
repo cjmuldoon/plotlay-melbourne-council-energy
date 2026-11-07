@@ -1,0 +1,53 @@
+asset_name,how,source_id,area_m2,length_m,parts,area_vs_council_layer,register_point_distance_m,register_position,sheet,check,note
+Administration - 602 Little Bourke Street Storage,footprint,811841,653.6,,1,0.9993,2313.5,point,check_01.png,"ok, placed at its address","The 2023 footprint at 602-606 Little Bourke Street; the register point is at the Citiwide depot in North Melbourne, 2.3 km away."
+Administration - Council House 1,footprint,802842,1639.1,,1,1.0001,0.0,point,check_01.png,ok,
+Administration - Council House 2,footprint,810188,994.0,,1,1.0,0.0,point,check_01.png,ok,
+Administration - Melbourne Town Hall,footprint,804893,1331.0,,1,1.0,0.0,point,check_01.png,ok,
+Arts Centre - Meat Market,footprint,812168,4329.1,,1,0.9998,0.0,point,check_01.png,ok,
+Arts Centre - Nth Melb Town Hall,footprint,813349,1415.2,,1,1.0001,0.0,point,check_01.png,ok,
+Boulevard - Flemington Road,line,,,1988.0,1,,,none,check_02.png,ok,
+Boulevard - Royal Parade,line,,,1768.0,1,,,none,check_02.png,ok,
+Boulevard - St Kilda Road,line,,,2881.0,1,,1.6,point,check_02.png,ok,
+Boulevard - Victoria Parade,line,,,1651.0,1,,1137.8,point,check_02.png,"ok, placed as named","Line along Victoria Parade through the council road corridor centres; the register point is 1.1 km west, near Victoria Street."
+Community Centre - Docklands Hub,footprint,806169,377.4,,1,1.001,29.9,point,check_02.png,ok,The only building in the Hub@Docklands parcel; the register point is 30 m away in the same parcel.
+Community Centre - North Melbourne,footprint,800828,2063.3,,1,0.9997,0.0,point,check_02.png,ok,
+Community Centre - Southbank,footprint,809843,768.5,,1,1.0006,6.5,point,check_03.png,ok,Boyd Community Hub footprint; the register point is 6.5 m away in the same parcel.
+Garden - Carlton South,parcel,108268,88112.5,,1,0.9999,0.0,point,check_03.png,ok,
+Garden - Fitzroy,parcel,103807,262856.0,,1,1.0,0.0,point,check_03.png,ok,
+Garden - Flagstaff,parcel,102942,73496.2,,1,0.9999,,none,check_03.png,ok,
+Garden - Queen Victoria,parcel,111022,48555.5,,1,1.0001,,none,check_03.png,ok,
+Garden - Treasury,parcel,108996,58413.7,,1,1.0,,none,check_03.png,ok,
+Garden Alexandra,parcel,101101,52185.5,,1,1.0001,,none,check_04.png,ok,
+Information - Federation Square Centre,point,,,,1,,0.2,point,check_04.png,"ok, point",The 2014 visitor centre since replaced by the Metro Tunnel works: a point at the register position.
+Lease - 225 Bourke St - City Village,footprint,807302,588.5,,1,0.9992,0.0,point,check_04.png,"ok, shared building","A lease inside the Commonwealth Bank building: the whole footprint, so not compared per m²."
+Lease - Batman Park Heliport Office,footprint,810221,74.7,,1,0.9963,,none,check_04.png,"ok, likely",The only building in the Batman Park parcel (75 m²); no register point.
+Lease - Campbell Arcade,parcel,101345,903.1,,1,1.0001,0.0,point,check_04.png,ok,"An arcade under Flinders Street: its council parcel, not a footprint."
+Lease - Car Park City Square,point,,,,1,,0.1,point,check_04.png,"ok, point",An underground car park since replaced by the Metro Tunnel works: a point at the register position.
+Lease - Car Park Elgin Street,footprint,813450,1636.4,,1,0.9996,0.0,point,check_05.png,ok,
+Lease - Event Supply - Swanston Street,point,,,,1,,0.2,point,check_05.png,"ok, point",A power supply for events in the street: a point at the register position.
+Lease - Fitzroy Gardens Pavilion Cafe,footprint,805404,368.4,,1,1.0011,,none,check_05.png,ok,"The building in the parcel named The Pavilion, Fitzroy Gardens. Its water meter likely serves garden watering too (see billing_coverage.csv)."
+Lease - Marina Ye,parcel,597237,38389.5,,1,1.0001,0.0,point,check_05.png,ok,"The Marina YE parcel, mostly water and berths."
+Lease - Melbourne Town Hall,footprint,818838,3068.8,,1,0.9999,0.0,point,check_05.png,ok,
+Lease - Multicultural Hub,footprint,816630,1229.3,,1,1.0003,0.0,point,check_05.png,ok,
+Library - City,footprint,808962,1476.3,,1,1.0002,0.0,point,check_06.png,"ok, shared building",The library occupies part of the building at 253 Flinders Lane: not compared per m².
+Library - East Melbourne,footprint,803742,589.3,,1,1.0005,0.0,point,check_06.png,ok,
+Library - North Melbourne,footprint,811868,260.1,,1,1.0002,0.0,point,check_06.png,ok,
+Park - Birrarung Marr,parcel,573368,79528.1,,1,1.0001,,none,check_06.png,ok,
+Park - Fawkner,parcel,103756,412239.7,,1,1.0004,0.0,point,check_06.png,ok,
+Park - JJ Holland,parcel,105220,102010.5,,1,0.9997,0.0,point,check_06.png,ok,
+Park - Kings Domain,parcel,108615,214228.2,,5,1.0001,0.0,point,check_07.png,ok,"Five parcel parts sharing property_id 108615, joined into one key."
+Park - Parliament,parcel,106982,7346.2,,1,0.9999,0.0,point,check_07.png,ok shape; bills to query,"The parcel is right. Its water bills cover 211 of 365 days, with a gap from November to February and most of the year in March to May."
+Park - Princes Park,parcel,107696,395856.7,,1,0.9996,0.0,point,check_07.png,ok,
+Park - Royal Park,parcel,107426,1568501.5,,15,0.9996,0.0,point,check_07.png,ok,"Fifteen parcel parts sharing property_id 107426, joined into one key. Most of it is not irrigated."
+Park - Shrine,parcel,111025,129994.7,,1,1.0002,0.0,point,check_07.png,ok,
+Recreation Centre - City Baths,footprint,817696,2431.1,,1,1.0,0.0,point,check_07.png,ok,
+Recreation Centre - North Melbourne,footprint,812054,576.5,,1,0.9992,5.5,point,check_08.png,ok,The main building; the register point is 5.5 m away. A smaller building in the same parcel is left out.
+Reserve - Darling Square,parcel,102411,8194.1,,1,1.0,,none,check_08.png,ok,
+Reserve - Jolimont,parcel,111460,8642.2,,1,1.0,,none,check_08.png,ok,
+Reserve - Lincoln Square,parcel,101264,16287.5,,1,0.9998,0.0,point,check_08.png,ok,
+Reserve - Point Park,parcel,611697,10153.8,,1,1.0001,,none,check_08.png,ok,
+Reserve - Powlett,parcel,107620,20477.8,,1,1.0,,none,check_08.png,ok,
+Reserve - Southbank Promenade,parcel,111302,7608.0,,1,1.0001,,none,check_09.png,ok shape; bills to query,"The parcel named Southbank Promenade; the promenade continues west on other parcels, and its water is billed on several meters."
+Sports Pavilion - Fawkner Park South,footprint,802202,584.6,,1,1.001,0.0,point,check_09.png,ok,
+Street Reserve - Alexandra Avenue,line,,,1733.0,1,,,none,check_09.png,ok,
+Toilets - Collins Street Town Hall,point,,,,1,,0.1,point,check_09.png,"ok, point",In the street outside the Town Hall: a point at the register position.
