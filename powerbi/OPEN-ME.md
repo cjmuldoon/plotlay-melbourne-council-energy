@@ -17,6 +17,8 @@
    - If Desktop warns about privacy levels, choose **Ignore privacy levels** for this file (all sources are public open data) or set them to Public.
 4. Check the numbers (below).
 
+If the report was updated while open, close Power BI and reopen the .pbip rather than using Apply external changes. (After Apply external changes one export drew the page at about 57% inside a much larger canvas; a full close and reopen put it right.)
+
 ## Check the numbers after Refresh
 
 After **Refresh**, with the Measure dropdown on **Electricity** and the Month dropdown empty (as the report opens):
