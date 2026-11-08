@@ -6,6 +6,6 @@ relationship fafa8c3c-0d1b-6560-315c-8181543de541
 	fromColumn: Usage.month_start
 	toColumn: Months.month_start
 
-relationship 7987e3bb-a742-a795-b7d4-329530ce1c87
+relationship 65f6c102-d75f-780e-7725-74befe38d7d0
 	fromColumn: Usage.measure
-	toColumn: Measures.measure
+	toColumn: Utilities.measure

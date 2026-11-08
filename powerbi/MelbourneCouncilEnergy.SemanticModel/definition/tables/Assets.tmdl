@@ -2,30 +2,30 @@ table Assets
 	lineageTag: 9aedeaf1-f77b-8642-abe5-28503b8c5de8
 
 	/// The one measure the usage is for: the one picked, or Electricity when none is
-	measure 'Measure shown' = IF ( HASONEVALUE ( Measures[measure] ), VALUES ( Measures[measure] ), "Electricity" )
+	measure 'Measure shown' = IF ( HASONEVALUE ( Utilities[measure] ), VALUES ( Utilities[measure] ), "Electricity" )
 		lineageTag: b425877a-e146-49d1-96bf-7964534413c2
 
 	/// The usage of one measure (electricity kWh, gas MJ or water kL): the one picked, or electricity. Measures are never added together. The whole year unless a month is picked
 	measure Amount =
 			VAR m = [Measure shown]
-			RETURN CALCULATE ( SUM ( Usage[amount] ), Measures[measure] = m )
+			RETURN CALCULATE ( SUM ( Usage[amount] ), Utilities[measure] = m )
 		formatString: #,0
 		lineageTag: 5c264d98-1b71-9ca3-e044-6b6cb6882c34
 
-	measure Unit = LOOKUPVALUE ( Measures[unit], Measures[measure], [Measure shown] )
+	measure Unit = LOOKUPVALUE ( Utilities[unit], Utilities[measure], [Measure shown] )
 		lineageTag: 247c3a12-4bbf-1bcb-5cfb-522081be4d09
 
-	measure 'Electricity kWh' = CALCULATE ( SUM ( Usage[amount] ), Measures[measure] = "Electricity" )
+	measure 'Electricity kWh' = CALCULATE ( SUM ( Usage[amount] ), Utilities[measure] = "Electricity" )
 		formatString: #,0
 		displayFolder: By measure
 		lineageTag: a8c4c3ed-7f32-5905-8cf9-6297e852776e
 
-	measure 'Gas MJ' = CALCULATE ( SUM ( Usage[amount] ), Measures[measure] = "Gas" )
+	measure 'Gas MJ' = CALCULATE ( SUM ( Usage[amount] ), Utilities[measure] = "Gas" )
 		formatString: #,0
 		displayFolder: By measure
 		lineageTag: d3b6267d-cdb0-6ff9-be62-b6760205f183
 
-	measure 'Water kL' = CALCULATE ( SUM ( Usage[amount] ), Measures[measure] = "Water" )
+	measure 'Water kL' = CALCULATE ( SUM ( Usage[amount] ), Utilities[measure] = "Water" )
 		formatString: #,0
 		displayFolder: By measure
 		lineageTag: 94a33ed3-941a-7ca8-3138-5fc1fa049eeb

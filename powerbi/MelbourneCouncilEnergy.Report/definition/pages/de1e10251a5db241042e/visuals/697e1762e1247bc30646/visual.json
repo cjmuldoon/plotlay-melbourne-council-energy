@@ -3,9 +3,9 @@
   "name": "697e1762e1247bc30646",
   "position": {
     "x": 1180,
-    "y": 18,
+    "y": 4,
     "z": 2,
-    "height": 72,
+    "height": 90,
     "width": 340,
     "tabOrder": 2
   },
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measures"
+                      "Entity": "Utilities"
                     }
                   },
                   "Property": "measure"
                 }
               },
-              "queryRef": "Measures.measure",
+              "queryRef": "Utilities.measure",
               "nativeQueryRef": "measure",
               "displayName": "Measure (one at a time)",
               "active": true
@@ -127,7 +127,7 @@
                 "From": [
                   {
                     "Name": "y",
-                    "Entity": "Measures",
+                    "Entity": "Utilities",
                     "Type": 0
                   }
                 ],

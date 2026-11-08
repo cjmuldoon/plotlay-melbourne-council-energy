@@ -6,12 +6,12 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["DataFolder","GetFile","Assets","Usage","Months","Measures"]
+annotation PBI_QueryOrder = ["DataFolder","GetFile","Assets","Usage","Months","Utilities"]
 annotation __PBI_TimeIntelligenceEnabled = 0
 
 ref table Assets
 ref table Usage
 ref table Months
-ref table Measures
+ref table Utilities
 
 ref cultureInfo en-AU

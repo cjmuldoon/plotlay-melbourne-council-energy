@@ -1,9 +1,9 @@
-table Measures
-	lineageTag: 4807de9a-c38e-9fdd-bbc0-9156010c27ff
+table Utilities
+	lineageTag: ceba282b-7418-b7f1-9979-8b645e1cba56
 
 	column measure
 		dataType: string
-		lineageTag: 252488f5-0b58-0e97-6c16-ffd973073947
+		lineageTag: 74cd01c0-35da-32c9-d4a6-a5bc80154843
 		summarizeBy: none
 		sourceColumn: measure
 
@@ -11,13 +11,13 @@ table Measures
 
 	column unit
 		dataType: string
-		lineageTag: 0ddf51a2-f943-b191-7230-1bc3e8c95276
+		lineageTag: 99e85b3f-cd35-a9e4-cf69-d6b674c0bf4e
 		summarizeBy: none
 		sourceColumn: unit
 
 		annotation SummarizationSetBy = Automatic
 
-	partition Measures = m
+	partition Utilities = m
 		mode: import
 		source =
 				let
