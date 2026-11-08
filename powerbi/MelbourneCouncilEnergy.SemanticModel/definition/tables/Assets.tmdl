@@ -71,7 +71,7 @@ table Assets
 		lineageTag: 5a3bfe63-070d-4f79-012b-39ea36df29c4
 
 	/// Drill-through page title
-	measure 'Asset title' = SELECTEDVALUE ( Assets[asset_name], "Pick an asset" ) & ", " & SELECTEDVALUE ( Assets[address], "" )
+	measure 'Asset title' = IF ( HASONEVALUE ( Assets[asset_name] ), VALUES ( Assets[asset_name] ) & ", " & SELECTEDVALUE ( Assets[address], "" ) & "  (pick another: right-click an asset on the overview, Drill through)", "Pick an asset on the overview page (right-click, Drill through)" )
 		lineageTag: 7b4cfda8-5a76-0a19-b969-a3607ff24d9c
 
 	column asset_name

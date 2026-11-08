@@ -47,6 +47,10 @@ If the Shape Map comes up empty after opening, drag the fields back: Location `A
 
 The scatter chart on **Month by month** has `Months[month]` on its built-in Play axis. Press the play button under the chart to step July 2013 to June 2014: the parks climb the Water axis from November and fall back by May.
 
+## Exporting a PDF
+
+The PDF export draws each page as it is saved. To export the asset page for a different asset, set it in the page's filter (Filters pane, this page) and save before exporting; a pick made by clicking isn't kept in the export. The asset page opens on Council House 1. Slicer picks you save are kept.
+
 ## Save a .pbix too
 
 After the refresh: **File, Save as**, type **Power BI file (\*.pbix)**, save as `powerbi\MelbourneCouncilEnergy.pbix`. It includes the data.
