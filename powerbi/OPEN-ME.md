@@ -57,7 +57,7 @@ After the refresh: **File, Save as**, type **Power BI file (\*.pbix)**, save as 
 
 ## Shot list for the website and the video
 
-Capture at 1920 × 1080 (Windows display scaling 100%), Plotlay theme on. Snipping Tool (Win+Shift+S) for stills, Win+Alt+R or Clipchamp for clips. Save to `powerbi/screenshots/`.
+Capture at 1920 × 1080 (Windows display scaling 100%), Plotlay theme on. Snipping Tool (Win+Shift+S) for stills, Win+Alt+R or Clipchamp for clips. Save to `powerbi/Screenshots/`.
 
 | # | Shot | How | Length |
 |---|---|---|---|

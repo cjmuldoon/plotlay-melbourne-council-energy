@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "b17da668c202ecb6f56e",
   "position": {
     "x": 1180,
@@ -28,7 +28,8 @@
               },
               "queryRef": "Assets.asset_name",
               "nativeQueryRef": "asset_name",
-              "displayName": "Asset"
+              "displayName": "Asset",
+              "active": true
             }
           ]
         },
@@ -67,8 +68,7 @@
             },
             "direction": "Descending"
           }
-        ],
-        "isDefaultSort": false
+        ]
       }
     },
     "drillFilterOtherVisuals": true,

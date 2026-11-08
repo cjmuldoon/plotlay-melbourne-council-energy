@@ -7,6 +7,7 @@ model Model
 		returnErrorValuesAsNull
 
 annotation PBI_QueryOrder = ["DataFolder","GetFile","Assets","Usage","Months","Measures"]
+annotation __PBI_TimeIntelligenceEnabled = 0
 
 ref table Assets
 ref table Usage
