@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "MelbourneCouncilEnergy"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d6fed72b-923c-40c7-a03b-0d324acb7d5c"
+  }
+}

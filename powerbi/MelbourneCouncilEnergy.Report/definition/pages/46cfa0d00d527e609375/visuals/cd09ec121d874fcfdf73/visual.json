@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "cd09ec121d874fcfdf73",
   "position": {
     "x": 40,
@@ -28,7 +28,27 @@
               },
               "queryRef": "Assets.asset_name",
               "nativeQueryRef": "asset_name",
+              "active": true,
               "displayName": "Asset"
+            }
+          ]
+        },
+        "Play": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Months"
+                    }
+                  },
+                  "Property": "month"
+                }
+              },
+              "queryRef": "Months.month",
+              "nativeQueryRef": "month",
+              "displayName": "Month"
             }
           ]
         },
@@ -47,6 +67,7 @@
               },
               "queryRef": "Assets.Area m2",
               "nativeQueryRef": "Area m2",
+              "active": true,
               "displayName": "Area (m²)"
             }
           ]
@@ -69,29 +90,37 @@
               "displayName": "Water (kL)"
             }
           ]
-        },
-        "Play": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Months"
-                    }
-                  },
-                  "Property": "month"
-                }
-              },
-              "queryRef": "Months.month",
-              "nativeQueryRef": "month",
-              "displayName": "Month"
-            }
-          ]
         }
       }
     },
-    "drillFilterOtherVisuals": true,
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -128,34 +157,7 @@
         }
       ]
     },
-    "objects": {
-      "categoryAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ]
-    }
+    "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [

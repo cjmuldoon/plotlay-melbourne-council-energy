@@ -1,1 +1,462 @@
 cultureInfo en-AU
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "utilities.measure": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Utilities",
+			          "ConceptualProperty": "measure"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Measure (one at a time)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.asset_name_short": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "asset_name_short"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Asset": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "Amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Usage": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.assets_with_no_register_location": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "Assets with no register location"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Assets": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.asset_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "asset_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Asset": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.unit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "Unit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Unit": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.area_m2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "Area m2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Area (m²)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.water_kl": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "Water kL"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Water (kL)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "category"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Category": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.water_summer_over_winter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "Water summer over winter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Summer ÷ winter": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.water_days_billed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "water_days_billed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Water days billed": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.water_mm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "Water mm"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Water (mm)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.kwh_per_m2_floor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "kWh per m2 floor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kWh per m² of floor": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.electricity_kwh": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "Electricity kWh"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Electricity (kWh)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.asset_title": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "Asset title"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Asset": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.gas_mj": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "Gas MJ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Gas (MJ)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.register_position": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "register_position"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Register location": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.shape_basis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "shape_basis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Shape from": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.area_m21": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "area_m2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Area (m²)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "assets.shape_note": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assets",
+			          "ConceptualProperty": "shape_note"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Note": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "months.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Months",
+			          "ConceptualProperty": "month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Month (none: the whole year)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Month": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

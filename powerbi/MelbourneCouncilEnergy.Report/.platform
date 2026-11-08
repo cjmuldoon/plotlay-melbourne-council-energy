@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "MelbourneCouncilEnergy"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "78a25055-2a7a-4919-81bd-76c7e5ec247f"
+  }
+}
