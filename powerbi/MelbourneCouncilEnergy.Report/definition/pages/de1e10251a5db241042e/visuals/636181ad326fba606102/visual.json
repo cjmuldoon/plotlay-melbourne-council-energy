@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Assets.Assets with no register location",
-              "nativeQueryRef": "Assets with no register location"
+              "nativeQueryRef": "Assets with no register location",
+              "displayName": "Assets"
             }
           ]
         }
@@ -49,6 +50,28 @@
               "expr": {
                 "Literal": {
                   "Value": "'Assets with no location in the register'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

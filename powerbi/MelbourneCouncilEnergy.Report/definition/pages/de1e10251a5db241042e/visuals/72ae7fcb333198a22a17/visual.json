@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "72ae7fcb333198a22a17",
   "position": {
-    "x": 1560,
-    "y": 30,
-    "z": 1,
-    "height": 64,
-    "width": 320,
-    "tabOrder": 1
+    "x": 1540,
+    "y": 18,
+    "z": 2,
+    "height": 72,
+    "width": 340,
+    "tabOrder": 2
   },
   "visual": {
     "visualType": "slicer",
@@ -27,7 +27,9 @@
                 }
               },
               "queryRef": "Months.month",
-              "nativeQueryRef": "month"
+              "nativeQueryRef": "month",
+              "displayName": "Month (none: the whole year)",
+              "active": true
             }
           ]
         }
@@ -41,14 +43,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Month (none: the whole year)'"
+                  "Value": "false"
                 }
               }
             }
@@ -64,6 +59,59 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "singleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
                 }
               }
             }

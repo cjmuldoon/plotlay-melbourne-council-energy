@@ -15,18 +15,29 @@
    - By default the data is read from the repo's public copy on GitHub (`DataFolder` is `https://raw.githubusercontent.com/cjmuldoon/plotlay-melbourne-council-energy/main/data/`). If Desktop asks how to connect, choose **Anonymous** and **Connect**.
    - To read the files on disk instead: **Home, Transform data, Edit parameters**, set `DataFolder` to the full path of the repo's `data` folder **ending with a backslash**, then **OK** and **Apply changes**.
    - If Desktop warns about privacy levels, choose **Ignore privacy levels** for this file (all sources are public open data) or set them to Public.
-4. After the refresh, pick **Water** on the Measure slicer of the Overview page: the card reads about 832,872 kL for the year (the README's figure). If it does, everything is joined correctly.
+4. Check the numbers (below).
+
+## Check the numbers after Refresh
+
+After **Refresh**, with the Measure dropdown on **Electricity** and the Month dropdown empty (as the report opens):
+
+| Overview card | Should read |
+|---|---|
+| Usage of the mapped assets, measure picked | 9,698,626 kWh (Power BI may show 9.70M) |
+| Assets with no location in the register | 18 |
+
+Pick **Gas** and the first card reads 19,558,151 MJ; pick **Water** and it reads 832,872 kL (the README's figures for the placed assets). With Water and the month **Jan 2014** it reads 140,960 kL. The bar chart's top three for electricity: Administration - Council House 1 2,177,677, Lease - Melbourne Town Hall 1,065,910, Administration - Council House 2 857,692.
+
+On **Per square metre** the water bar for Park - Parliament reads 3,710 mm and the top electricity bar, Recreation Centre - North Melbourne, 282.7 kWh per m². Drill through from Administration - Council House 1: electricity 2,177,677 kWh for the year.
 
 ## One measure at a time
 
-Electricity (kWh), gas (MJ) and water (kL) are rows of one `Usage` table with a `measure` column. The `Amount` measure is blank unless one measure is picked, so the three are never added together. The Measure slicer is single select. `Electricity kWh`, `Gas MJ` and `Water kL` are fixed to their measure for the per-area pages.
+Electricity (kWh), gas (MJ) and water (kL) are rows of one `Usage` table with a `measure` column. The `Amount` measure always counts one measure: the one picked on the Measure slicer (a dropdown that takes one at a time and opens on Electricity), or electricity if the slicer is ever cleared, so the three are never added together. With no month picked it is the whole year. `Electricity kWh`, `Gas MJ` and `Water kL` are fixed to their measure for the per-area pages.
 
-## The map setting Power BI asks for by hand
+## The map
 
-Power BI keeps a custom map file inside the report only once you have chosen it, so do this once and save:
-
-- **Shape Map** (Overview page). Select the map, then **Format visual, Visual, Map settings**: Map type **Custom map**, **Add map type**, choose `..\data\geometry\council_assets.topojson`. Under **View map keys** the council's asset names (Garden - Treasury...) should match. Projection: Mercator. The Shape Map draws areas only: the five boulevards (lines) and four points are in the GeoJSON for Azure Maps, not in the Shape Map. If the Shape Map is not in the Visualizations pane, turn it on in **Options, Preview features, Shape map visual**.
-- Optional, **Azure Maps**: add a reference layer from `..\data\geometry\council_assets.geojson`, join property `key`, map style **Grayscale (light)** or **Blank**. Do not publish satellite basemap screenshots.
+- **Shape Map** (Overview page). The custom map is saved inside the report (`MelbourneCouncilEnergy.Report/StaticResources/RegisteredResources/council_assets.topojson`, a copy of `data/geometry/council_assets.topojson` that keeps only the asset name), so the assets draw on open, coloured by the measure picked. It matches `Assets[asset_name]`. The Shape Map draws areas only: the five boulevards (lines) and four points are in the GeoJSON for Azure Maps, not in the Shape Map. If the map shows the United States instead (an older Desktop can ignore a saved map): select the map, **Format visual** (the paintbrush), **Visual**, **Map settings**, **Map type: Custom map**, **Add map type** (or **Browse**), and choose `..\data\geometry\council_assets.topojson`. Under **View map keys** the council's asset names should be matched. If the Shape Map is not in the Visualizations pane at all, turn it on in **File, Options and settings, Options, Preview features, Shape map visual** and restart Desktop.
+- Optional, **Azure Maps**: add a reference layer from `..\data\geometry\council_assets.geojson` (Format visual, Visual, Reference layer, Data source: File), join property `key`, map style **Grayscale (light)** or **Blank**. Do not publish satellite basemap screenshots.
 
 If the Shape Map comes up empty after opening, drag the fields back: Location `Assets[asset_name]`, Color saturation `[Amount]`.
 
@@ -36,7 +47,7 @@ The scatter chart on **Month by month** has `Months[month]` on its built-in Play
 
 ## Save a .pbix too
 
-After the refresh and the map setting: **File, Save as**, type **Power BI file (\*.pbix)**, save as `powerbi\MelbourneCouncilEnergy.pbix`. It includes the data.
+After the refresh: **File, Save as**, type **Power BI file (\*.pbix)**, save as `powerbi\MelbourneCouncilEnergy.pbix`. It includes the data.
 
 ## Publish (only if you choose to)
 
@@ -50,12 +61,12 @@ Capture at 1920 × 1080 (Windows display scaling 100%), Plotlay theme on. Snippi
 
 | # | Shot | How | Length |
 |---|---|---|---|
-| 1 | Overview, water, the whole year | Measure slicer on Water, Month slicer empty | still |
-| 2 | The measure switch | Click Water, Electricity, Gas on the Measure slicer, about 1 s each: the map and bars change, the card's unit with them | 4 s clip |
-| 3 | Overview, January 2014 | Water, Month slicer on Jan 2014 | still |
+| 1 | Overview, water, the whole year | Measure dropdown on Water, Month dropdown empty | still |
+| 2 | The measure switch | Pick Water, Electricity, Gas in the Measure dropdown, about 1 s each: the map, card and bars change | 4 s clip |
+| 3 | Overview, January 2014 | Water, Month dropdown on Jan 2014 | still |
 | 4 | The play axis | Month by month page: press play on the scatter chart and let it run July to June | 10 to 12 s clip |
 | 5 | Per square metre | Both bar charts; hover Parliament Reserve to show its tooltip | still |
-| 6 | Drill-through | Right-click Garden - Treasury in a bar chart, **Drill through, Asset** | still, then a 3 s clip of the click |
+| 6 | Drill-through | Right-click Administration - Council House 1 in the bar chart, **Drill through, Asset** | still, then a 3 s clip of the click |
 | 7 | Model view | The four tables (Assets, Usage, Months, Measures) and their relationships | still |
 | 8 | Power Query | **Transform data**: the `DataFolder` parameter and the Usage steps | still |
 

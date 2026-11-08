@@ -29,6 +29,11 @@
           "name": "Plotlay_drafting_film.json",
           "path": "Plotlay_drafting_film.json",
           "type": "CustomTheme"
+        },
+        {
+          "name": "council_assets.topojson",
+          "path": "council_assets.topojson",
+          "type": "ShapeMap"
         }
       ]
     }

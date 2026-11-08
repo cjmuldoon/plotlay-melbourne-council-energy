@@ -27,12 +27,28 @@
                 }
               },
               "queryRef": "Assets.Asset title",
-              "nativeQueryRef": "Asset title"
+              "nativeQueryRef": "Asset title",
+              "displayName": "Asset"
             }
           ]
         }
       }
     },
-    "drillFilterOtherVisuals": true
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
   }
 }

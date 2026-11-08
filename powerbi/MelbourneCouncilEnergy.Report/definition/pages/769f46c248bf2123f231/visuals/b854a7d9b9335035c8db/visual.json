@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Assets.asset_name",
-              "nativeQueryRef": "asset_name"
+              "nativeQueryRef": "asset_name",
+              "displayName": "Asset"
             }
           ]
         },
@@ -45,10 +46,29 @@
                 }
               },
               "queryRef": "Assets.kWh per m2 floor",
-              "nativeQueryRef": "kWh per m2 floor"
+              "nativeQueryRef": "kWh per m2 floor",
+              "displayName": "kWh per m² of floor"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Assets"
+                  }
+                },
+                "Property": "kWh per m2 floor"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -66,7 +86,55 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Electricity a year per m² of estimated floor'"
+                  "Value": "'Electricity a year per m² of estimated floor, largest first'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

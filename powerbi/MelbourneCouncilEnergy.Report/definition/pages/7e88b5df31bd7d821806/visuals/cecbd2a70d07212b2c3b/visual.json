@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Assets.Electricity kWh",
-              "nativeQueryRef": "Electricity kWh"
+              "nativeQueryRef": "Electricity kWh",
+              "displayName": "Electricity (kWh)"
             }
           ]
         }
@@ -48,7 +49,29 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Electricity, kWh'"
+                  "Value": "'Electricity, kWh, the year'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

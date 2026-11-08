@@ -1,12 +1,18 @@
 table Assets
 	lineageTag: 9aedeaf1-f77b-8642-abe5-28503b8c5de8
 
-	/// The usage of the one measure picked (electricity kWh, gas MJ or water kL). Blank when more than one is picked: measures are never added together
-	measure Amount = IF ( HASONEVALUE ( Measures[measure] ), SUM ( Usage[amount] ) )
+	/// The one measure the usage is for: the one picked, or Electricity when none is
+	measure 'Measure shown' = IF ( HASONEVALUE ( Measures[measure] ), VALUES ( Measures[measure] ), "Electricity" )
+		lineageTag: b425877a-e146-49d1-96bf-7964534413c2
+
+	/// The usage of one measure (electricity kWh, gas MJ or water kL): the one picked, or electricity. Measures are never added together. The whole year unless a month is picked
+	measure Amount =
+			VAR m = [Measure shown]
+			RETURN CALCULATE ( SUM ( Usage[amount] ), Measures[measure] = m )
 		formatString: #,0
 		lineageTag: 5c264d98-1b71-9ca3-e044-6b6cb6882c34
 
-	measure Unit = SELECTEDVALUE ( Measures[unit], "pick one measure" )
+	measure Unit = LOOKUPVALUE ( Measures[unit], Measures[measure], [Measure shown] )
 		lineageTag: 247c3a12-4bbf-1bcb-5cfb-522081be4d09
 
 	measure 'Electricity kWh' = CALCULATE ( SUM ( Usage[amount] ), Measures[measure] = "Electricity" )

@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Assets.register_position",
-              "nativeQueryRef": "register_position"
+              "nativeQueryRef": "register_position",
+              "displayName": "Register location"
             },
             {
               "field": {
@@ -41,7 +42,8 @@
                 }
               },
               "queryRef": "Assets.shape_basis",
-              "nativeQueryRef": "shape_basis"
+              "nativeQueryRef": "shape_basis",
+              "displayName": "Shape from"
             },
             {
               "field": {
@@ -55,7 +57,8 @@
                 }
               },
               "queryRef": "Assets.area_m2",
-              "nativeQueryRef": "area_m2"
+              "nativeQueryRef": "area_m2",
+              "displayName": "Area (m²)"
             },
             {
               "field": {
@@ -69,7 +72,8 @@
                 }
               },
               "queryRef": "Assets.water_days_billed",
-              "nativeQueryRef": "water_days_billed"
+              "nativeQueryRef": "water_days_billed",
+              "displayName": "Water days billed"
             },
             {
               "field": {
@@ -83,10 +87,29 @@
                 }
               },
               "queryRef": "Assets.shape_note",
-              "nativeQueryRef": "shape_note"
+              "nativeQueryRef": "shape_note",
+              "displayName": "Note"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Assets"
+                  }
+                },
+                "Property": "area_m2"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -105,6 +128,113 @@
               "expr": {
                 "Literal": {
                   "Value": "'How the shape was made'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "129.9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Assets.register_position"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "92.9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Assets.shape_basis"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "70.7D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Assets.area_m2"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "57.7D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Assets.water_days_billed"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "314.7D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Assets.shape_note"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

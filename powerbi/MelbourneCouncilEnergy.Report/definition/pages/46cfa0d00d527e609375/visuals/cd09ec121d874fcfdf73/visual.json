@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Assets.asset_name",
-              "nativeQueryRef": "asset_name"
+              "nativeQueryRef": "asset_name",
+              "displayName": "Asset"
             }
           ]
         },
@@ -45,7 +46,8 @@
                 }
               },
               "queryRef": "Assets.Area m2",
-              "nativeQueryRef": "Area m2"
+              "nativeQueryRef": "Area m2",
+              "displayName": "Area (m²)"
             }
           ]
         },
@@ -63,7 +65,8 @@
                 }
               },
               "queryRef": "Assets.Water kL",
-              "nativeQueryRef": "Water kL"
+              "nativeQueryRef": "Water kL",
+              "displayName": "Water (kL)"
             }
           ]
         },
@@ -81,7 +84,8 @@
                 }
               },
               "queryRef": "Months.month",
-              "nativeQueryRef": "month"
+              "nativeQueryRef": "month",
+              "displayName": "Month"
             }
           ]
         }
@@ -103,6 +107,41 @@
               "expr": {
                 "Literal": {
                   "Value": "'Water against area, by month (play axis)'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

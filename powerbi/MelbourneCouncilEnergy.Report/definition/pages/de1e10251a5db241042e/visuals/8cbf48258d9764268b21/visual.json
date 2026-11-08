@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Assets.Amount",
-              "nativeQueryRef": "Amount"
+              "nativeQueryRef": "Amount",
+              "displayName": "Usage"
             }
           ]
         }
@@ -48,7 +49,29 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Usage, measure picked'"
+                  "Value": "'Usage of the mapped assets, measure picked'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

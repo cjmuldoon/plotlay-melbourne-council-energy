@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Assets.asset_name",
-              "nativeQueryRef": "asset_name"
+              "nativeQueryRef": "asset_name",
+              "displayName": "Asset"
             },
             {
               "field": {
@@ -41,7 +42,8 @@
                 }
               },
               "queryRef": "Assets.Water kL",
-              "nativeQueryRef": "Water kL"
+              "nativeQueryRef": "Water kL",
+              "displayName": "Water (kL)"
             },
             {
               "field": {
@@ -55,7 +57,8 @@
                 }
               },
               "queryRef": "Assets.Water summer over winter",
-              "nativeQueryRef": "Water summer over winter"
+              "nativeQueryRef": "Water summer over winter",
+              "displayName": "Summer ÷ winter"
             },
             {
               "field": {
@@ -69,10 +72,29 @@
                 }
               },
               "queryRef": "Assets.water_days_billed",
-              "nativeQueryRef": "water_days_billed"
+              "nativeQueryRef": "water_days_billed",
+              "displayName": "Water days billed"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Assets"
+                  }
+                },
+                "Property": "Water kL"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -91,6 +113,99 @@
               "expr": {
                 "Literal": {
                   "Value": "'Water, summer over winter (days billed in the year)'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "390.4D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Assets.asset_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "96.8D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Assets.Water kL"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "99.8D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Assets.Water summer over winter"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "79.0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Assets.water_days_billed"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

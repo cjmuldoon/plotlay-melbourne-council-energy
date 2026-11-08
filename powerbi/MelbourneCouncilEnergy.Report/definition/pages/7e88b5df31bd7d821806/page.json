@@ -8,6 +8,7 @@
   "pageBinding": {
     "name": "559919e3-1c10-7aa8-8884-96b2e1aab9d5",
     "type": "Drillthrough",
+    "acceptsFilterContext": "None",
     "parameters": [
       {
         "name": "39672cc5-85cc-27e2-f240-1c27c60c3ff6",

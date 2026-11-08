@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Assets.Water kL",
-              "nativeQueryRef": "Water kL"
+              "nativeQueryRef": "Water kL",
+              "displayName": "Water (kL)"
             }
           ]
         }
@@ -48,7 +49,29 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Water, kL'"
+                  "Value": "'Water, kL, the year'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

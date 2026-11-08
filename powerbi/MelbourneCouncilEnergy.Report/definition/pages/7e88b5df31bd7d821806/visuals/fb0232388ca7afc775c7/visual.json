@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "48adbdb88607eac7a34c",
+  "name": "fb0232388ca7afc775c7",
   "position": {
     "x": 40,
     "y": 300,
     "z": 1,
-    "height": 700,
+    "height": 340,
     "width": 1120,
     "tabOrder": 1
   },
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Months.month",
-              "nativeQueryRef": "month"
+              "nativeQueryRef": "month",
+              "displayName": "Month"
             }
           ]
         },
@@ -45,24 +46,29 @@
                 }
               },
               "queryRef": "Assets.Water kL",
-              "nativeQueryRef": "Water kL"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Assets"
-                    }
-                  },
-                  "Property": "Electricity kWh"
-                }
-              },
-              "queryRef": "Assets.Electricity kWh",
-              "nativeQueryRef": "Electricity kWh"
+              "nativeQueryRef": "Water kL",
+              "displayName": "Water (kL)"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Months"
+                  }
+                },
+                "Property": "month"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -80,7 +86,49 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'By month (the two are on their own axes; never add them)'"
+                  "Value": "'Water by month, kL'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

@@ -27,11 +27,12 @@
                 }
               },
               "queryRef": "Assets.asset_name",
-              "nativeQueryRef": "asset_name"
+              "nativeQueryRef": "asset_name",
+              "displayName": "Asset"
             }
           ]
         },
-        "Y": {
+        "Value": {
           "projections": [
             {
               "field": {
@@ -45,7 +46,27 @@
                 }
               },
               "queryRef": "Assets.Amount",
-              "nativeQueryRef": "Amount"
+              "nativeQueryRef": "Amount",
+              "displayName": "Usage"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Assets"
+                    }
+                  },
+                  "Property": "Unit"
+                }
+              },
+              "queryRef": "Assets.Unit",
+              "nativeQueryRef": "Unit",
+              "displayName": "Unit"
             }
           ]
         }
@@ -66,7 +87,70 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Usage by asset (custom map: data/geometry/council_assets.topojson)'"
+                  "Value": "'Usage by asset, measure picked (darker: more)'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "shape": [
+        {
+          "properties": {
+            "datasourceType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'file_upload'"
+                }
+              }
+            },
+            "mapUrl": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            },
+            "map": {
+              "geoJson": {
+                "type": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'packaged'"
+                    }
+                  }
+                },
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'council_assets.topojson'"
+                    }
+                  }
+                },
+                "content": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "council_assets.topojson"
+                    }
+                  }
+                }
+              }
+            },
+            "projectionEnum": {
+              "expr": {
+                "Literal": {
+                  "Value": "'mercator'"
                 }
               }
             }

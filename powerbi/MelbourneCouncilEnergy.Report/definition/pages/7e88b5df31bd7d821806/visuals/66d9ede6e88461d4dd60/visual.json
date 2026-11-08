@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Assets.Gas MJ",
-              "nativeQueryRef": "Gas MJ"
+              "nativeQueryRef": "Gas MJ",
+              "displayName": "Gas (MJ)"
             }
           ]
         }
@@ -48,7 +49,29 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Gas, MJ'"
+                  "Value": "'Gas, MJ, the year'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
