@@ -23,6 +23,7 @@
                     "textStyle": {
                       "fontSize": "24pt",
                       "color": "#163c6e",
+                      "fontFamily": "Segoe UI Semibold",
                       "fontWeight": "bold"
                     }
                   }
@@ -34,7 +35,8 @@
                     "value": "Bills spread over their days, totalled by month. Press play on the scatter chart to step the months.",
                     "textStyle": {
                       "fontSize": "11pt",
-                      "color": "#5b6573"
+                      "color": "#5b6573",
+                      "fontFamily": "Segoe UI"
                     }
                   }
                 ]

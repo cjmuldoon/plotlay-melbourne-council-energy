@@ -23,6 +23,7 @@
                     "textStyle": {
                       "fontSize": "24pt",
                       "color": "#163c6e",
+                      "fontFamily": "Segoe UI Semibold",
                       "fontWeight": "bold"
                     }
                   }
@@ -34,7 +35,8 @@
                     "value": "City of Melbourne's 60 biggest users of electricity, gas and water, FY 2013-14. Shapes made in Plotlay.",
                     "textStyle": {
                       "fontSize": "11pt",
-                      "color": "#5b6573"
+                      "color": "#5b6573",
+                      "fontFamily": "Segoe UI"
                     }
                   }
                 ]
