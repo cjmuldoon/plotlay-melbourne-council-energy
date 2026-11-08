@@ -23,11 +23,11 @@
                       "Entity": "Assets"
                     }
                   },
-                  "Property": "asset_name"
+                  "Property": "asset_name_short"
                 }
               },
-              "queryRef": "Assets.asset_name",
-              "nativeQueryRef": "asset_name",
+              "queryRef": "Assets.asset_name_short",
+              "nativeQueryRef": "asset_name_short",
               "displayName": "Asset",
               "active": true
             }
@@ -161,7 +161,7 @@
                 "Entity": "Assets"
               }
             },
-            "Property": "asset_name"
+            "Property": "asset_name_short"
           }
         },
         "type": "TopN",
@@ -189,7 +189,7 @@
                               "Source": "s"
                             }
                           },
-                          "Property": "asset_name"
+                          "Property": "asset_name_short"
                         },
                         "Name": "field"
                       }
@@ -233,7 +233,7 @@
                             "Source": "s"
                           }
                         },
-                        "Property": "asset_name"
+                        "Property": "asset_name_short"
                       }
                     }
                   ],
@@ -249,5 +249,11 @@
         }
       }
     ]
-  }
+  },
+  "annotations": [
+    {
+      "name": "plotlay.categoryLabels",
+      "value": "[\"225 Bourke St - City Village\", \"602 Lt Bourke St store\", \"Arts Ctr Nth Melb Town Hall\", \"Batman Park Heliport Office\", \"Comm Ctr Docklands Hub\", \"Comm Ctr North Melbourne\", \"Comm Ctr Southbank\", \"Council House 1\", \"Council House 2\", \"Event Supply - Swanston St\", \"Fitzroy Gardens Pavilion Cafe\", \"Info Federation Square Ctr\", \"Info Parking Signage…\", \"Melbourne Town Hall\", \"Parking meters\", \"Pavilion Fawkner Park South\", \"Rec Ctr City Baths\", \"Rec Ctr North Melbourne\", \"Reserve - Southbank Prom\", \"Reserve Alexandra Avenue\", \"Reserve Investigator Drive\", \"Reserve Miscellaneous\", \"Security cameras\", \"Street lights Docklands\", \"Street lights Melbourne\", \"Toilets Collins St Town Hall\"]"
+    }
+  ]
 }

@@ -87,7 +87,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Usage by asset, measure picked (darker: more)'"
+                  "Value": "'Usage by asset, measure picked'"
                 }
               }
             },
@@ -279,7 +279,7 @@
   "annotations": [
     {
       "name": "plotlay.legend",
-      "value": "[[\"#6b1a10\", \"darker: more\"], [\"#f8dcc6\", \"paler: less\"]]"
+      "value": "[[\"#6b1a10\", \"darker: uses more\"], [\"#f8dcc6\", \"paler: uses less\"]]"
     }
   ]
 }

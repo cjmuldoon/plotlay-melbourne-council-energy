@@ -6,7 +6,7 @@
     "y": 158,
     "z": 2,
     "height": 78,
-    "width": 168.390625,
+    "width": 210.40625,
     "tabOrder": 2
   },
   "visual": {
@@ -27,7 +27,7 @@
                     }
                   },
                   {
-                    "value": "darker: more",
+                    "value": "darker: uses more",
                     "textStyle": {
                       "fontSize": "11pt",
                       "color": "#1f2a37",
@@ -47,7 +47,7 @@
                     }
                   },
                   {
-                    "value": "paler: less",
+                    "value": "paler: uses less",
                     "textStyle": {
                       "fontSize": "11pt",
                       "color": "#1f2a37",

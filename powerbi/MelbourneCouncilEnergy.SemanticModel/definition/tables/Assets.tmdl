@@ -261,6 +261,14 @@ table Assets
 
 		annotation SummarizationSetBy = Automatic
 
+	column asset_name_short
+		dataType: string
+		lineageTag: e6ccfd3c-2184-6379-a94c-d0351fa0587f
+		summarizeBy: none
+		sourceColumn: asset_name_short
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Assets = m
 		mode: import
 		source =
@@ -268,8 +276,10 @@ table Assets
 				    Source = Csv.Document(GetFile("assets/assets.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 				    Kept = Table.SelectColumns(Promoted, {"asset_name", "asset_type", "category", "address", "suburb", "register_position", "placed", "shape_basis", "source", "structure_id", "property_id", "parts", "area_m2", "length_m", "floors", "floor_m2_est", "water_mm", "centroid_lat", "centroid_lng", "electricity_days_billed", "water_days_billed", "shape_note"}),
-				    Typed = Table.TransformColumnTypes(Kept, {{"asset_name", type text}, {"asset_type", type text}, {"category", type text}, {"address", type text}, {"suburb", type text}, {"register_position", type text}, {"placed", type logical}, {"shape_basis", type text}, {"source", type text}, {"structure_id", type text}, {"property_id", type number}, {"parts", type number}, {"area_m2", type number}, {"length_m", type number}, {"floors", type number}, {"floor_m2_est", type number}, {"water_mm", type number}, {"centroid_lat", type number}, {"centroid_lng", type number}, {"electricity_days_billed", type number}, {"water_days_billed", type number}, {"shape_note", type text}}, "en-AU")
+				    Typed = Table.TransformColumnTypes(Kept, {{"asset_name", type text}, {"asset_type", type text}, {"category", type text}, {"address", type text}, {"suburb", type text}, {"register_position", type text}, {"placed", type logical}, {"shape_basis", type text}, {"source", type text}, {"structure_id", type text}, {"property_id", type number}, {"parts", type number}, {"area_m2", type number}, {"length_m", type number}, {"floors", type number}, {"floor_m2_est", type number}, {"water_mm", type number}, {"centroid_lat", type number}, {"centroid_lng", type number}, {"electricity_days_billed", type number}, {"water_days_billed", type number}, {"shape_note", type text}}, "en-AU"),
+				    ShortNames_asset_name_short = [#"Administration - 602 Little Bourke Street Storage" = "602 Lt Bourke St store", #"Administration - Council House 1" = "Council House 1", #"Administration - Council House 2" = "Council House 2", #"Administration - Melbourne Town Hall" = "Melbourne Town Hall", #"Arts Centre - Nth Melb Town Hall" = "Arts Ctr Nth Melb Town Hall", #"Community Centre - Docklands Hub" = "Comm Ctr Docklands Hub", #"Community Centre - North Melbourne" = "Comm Ctr North Melbourne", #"Community Centre - Southbank" = "Comm Ctr Southbank", #"Information - Federation Square Centre" = "Info Federation Square Ctr", #"Information - Parking Signage Network" = "Info Parking Signage…", #"Lease - 225 Bourke St - City Village" = "225 Bourke St - City Village", #"Lease - Batman Park Heliport Office" = "Batman Park Heliport Office", #"Lease - Event Supply - Swanston Street" = "Event Supply - Swanston St", #"Lease - Fitzroy Gardens Pavilion Cafe" = "Fitzroy Gardens Pavilion Cafe", #"Parking Meters - Melbourne Network" = "Parking meters", #"Recreation Centre - City Baths" = "Rec Ctr City Baths", #"Recreation Centre - North Melbourne" = "Rec Ctr North Melbourne", #"Reserve - Southbank Promenade" = "Reserve - Southbank Prom", #"Security Cameras - Melbourne Network" = "Security cameras", #"Sports Pavilion - Fawkner Park South" = "Pavilion Fawkner Park South", #"Street Lighting - Docklands Network" = "Street lights Docklands", #"Street Lighting - Melbourne Network" = "Street lights Melbourne", #"Street Reserve - Alexandra Avenue" = "Reserve Alexandra Avenue", #"Street Reserve - Investigator Drive" = "Reserve Investigator Drive", #"Street Reserve - Miscellaneous" = "Reserve Miscellaneous", #"Toilets - Collins Street Town Hall" = "Toilets Collins St Town Hall"],
+				    Short_asset_name_short = Table.AddColumn(Typed, "asset_name_short", each Record.FieldOrDefault(ShortNames_asset_name_short, [asset_name], [asset_name]), type text)
 				in
-				    Typed
+				    Short_asset_name_short
 
 	annotation PBI_ResultType = Table

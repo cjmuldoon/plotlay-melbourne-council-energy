@@ -119,5 +119,11 @@
         }
       ]
     }
-  }
+  },
+  "annotations": [
+    {
+      "name": "plotlay.noDefault",
+      "value": "opens on every value"
+    }
+  ]
 }
