@@ -41,6 +41,15 @@ UPSTREAM SOURCES
     © Commonwealth of Australia (Geoscience Australia), National Base Map, licensed under CC BY 4.0. No tiles are
     included in this repository. The other visuals draw their base from the council layers above.
 
+POWER BI MAP CONTEXT
+  The Shape Map in powerbi/ draws context round the council assets, generalised and cut to the map frame:
+  - suburbs and localities with the water mesh blocks cut out, and the City of Melbourne boundary: Australian Bureau
+    of Statistics, Australian Statistical Geography Standard (ASGS) Edition 3, Suburbs and Localities 2021, Mesh Blocks
+    2021 and Local Government Areas 2021, CC BY 4.0;
+  - the Yarra and other water areas cut out of the land: Vicmap Hydro, Water Area (HY_WATER_AREA_POLYGON), State of
+    Victoria (Department of Transport and Planning), CC BY 4.0.
+  Water is not a layer: it is the map background showing where no land is drawn.
+
 NOT INCLUDED
   Nothing in this repository is derived from OpenStreetMap. No aerial imagery was used or traced. The City of
   Melbourne's logos are not used, and nothing here implies endorsement by the City of Melbourne.

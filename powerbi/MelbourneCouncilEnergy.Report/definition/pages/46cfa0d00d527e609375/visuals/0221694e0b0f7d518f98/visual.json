@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Bills (FY 2013-14: 1 July 2013 to 30 June 2014), asset register, 2023 building footprints, property boundaries and road corridors: City of Melbourne Open Data, CC BY 4.0. Shapes made in Plotlay (getplotlay.com) from those layers. Bills spread over their days in Plotlay. Electricity, gas and water are never added together. Floor area is an estimate.",
+                    "value": "Bills (FY 2013-14: 1 July 2013 to 30 June 2014), asset register, 2023 building footprints, property boundaries and road corridors: City of Melbourne Open Data, CC BY 4.0. Shapes made in Plotlay (getplotlay.com) from those layers. Bills spread over their days in Plotlay. Electricity, gas and water are never added together. Floor area is an estimate. Map context: ABS ASGS 2021 suburbs and council boundary (CC BY 4.0), Vicmap Hydro (CC BY 4.0).",
                     "textStyle": {
                       "fontSize": "9pt",
                       "color": "#5b6573"
