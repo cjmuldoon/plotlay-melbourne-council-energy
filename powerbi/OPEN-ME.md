@@ -69,7 +69,7 @@ Capture at 1920 × 1080 (Windows display scaling 100%), Plotlay theme on. Snippi
 | 4 | The play axis | Month by month page: press play on the scatter chart and let it run July to June | 10 to 12 s clip |
 | 5 | Per square metre | Both bar charts; hover Parliament Reserve to show its tooltip | still |
 | 6 | Drill-through | Right-click Administration - Council House 1 in the bar chart, **Drill through, Asset** | still, then a 3 s clip of the click |
-| 7 | Model view | The four tables (Assets, Usage, Months, Measures) and their relationships | still |
+| 7 | Model view | The four tables (Assets, Usage, Months, Utilities) and their relationships | still |
 | 8 | Power Query | **Transform data**: the `DataFolder` parameter and the Usage steps | still |
 
 Keep the footer with the attribution visible in every shot.
