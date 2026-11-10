@@ -25,7 +25,7 @@ After **Refresh**, with the Measure dropdown on **Electricity** and the Month dr
 
 | Overview card | Should read |
 |---|---|
-| Usage of the mapped assets, measure picked | 9,698,626 kWh (Power BI may show 9.70M) |
+| Usage of the mapped assets, measure picked | 9,698,626 kWh |
 | Assets with no location in the register | 18 |
 
 Pick **Gas** and the first card reads 19,558,151 MJ; pick **Water** and it reads 832,872 kL (the README's figures for the placed assets). With Water and the month **Jan 2014** it reads 140,960 kL. The bar chart's top three for electricity: Administration - Council House 1 2,177,677, Lease - Melbourne Town Hall 1,065,910, Administration - Council House 2 857,692.
