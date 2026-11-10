@@ -70,7 +70,7 @@ table Assets
 		displayFolder: Mapping
 		lineageTag: 5a3bfe63-070d-4f79-012b-39ea36df29c4
 
-	/// Drill-through page title
+	/// Drill-through page title: the asset, or how to get here when none is picked
 	measure 'Asset title' = IF ( HASONEVALUE ( Assets[asset_name] ), VALUES ( Assets[asset_name] ) & ", " & SELECTEDVALUE ( Assets[address], "" ) & "  (pick another: right-click an asset on the overview, Drill through)", "Pick an asset on the overview page (right-click, Drill through)" )
 		lineageTag: 7b4cfda8-5a76-0a19-b969-a3607ff24d9c
 
@@ -220,18 +220,18 @@ table Assets
 	column centroid_lat
 		dataType: double
 		lineageTag: c6643fba-b72e-f2ec-657c-cac8de45b5ec
-		dataCategory: Latitude
 		summarizeBy: none
 		sourceColumn: centroid_lat
+		dataCategory: Latitude
 
 		annotation SummarizationSetBy = Automatic
 
 	column centroid_lng
 		dataType: double
 		lineageTag: c8b1e1c8-a10f-0a3c-e050-92fea87d65e3
-		dataCategory: Longitude
 		summarizeBy: none
 		sourceColumn: centroid_lng
+		dataCategory: Longitude
 
 		annotation SummarizationSetBy = Automatic
 
@@ -283,4 +283,3 @@ table Assets
 				    Short_asset_name_short
 
 	annotation PBI_ResultType = Table
-

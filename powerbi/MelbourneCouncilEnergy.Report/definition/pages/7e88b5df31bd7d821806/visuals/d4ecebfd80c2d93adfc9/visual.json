@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "d4ecebfd80c2d93adfc9",
   "position": {
     "x": 1180,
@@ -111,6 +111,43 @@
         ]
       }
     },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'How the shape was made'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "objects": {
       "columnWidth": [
         {
@@ -210,117 +247,6 @@
           }
         }
       ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'How the shape was made'"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI Semibold'"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "bad0bf38953b236e9b92",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Assets"
-              }
-            },
-            "Property": "register_position"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "bd2cca5a00731ac493ed",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Assets"
-              }
-            },
-            "Property": "shape_basis"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f0bc0d3d69c05e074899",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Assets"
-              }
-            },
-            "Property": "area_m2"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0d8e36fd5249095ad09e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Assets"
-              }
-            },
-            "Property": "water_days_billed"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b195edb5d0152b233598",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Assets"
-              }
-            },
-            "Property": "shape_note"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
+    }
   }
 }

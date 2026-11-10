@@ -21,15 +21,13 @@ table Usage
 
 	column month_start
 		dataType: dateTime
-		isHidden
 		formatString: mmm yyyy
+		isHidden
 		lineageTag: b8aeccba-8f1f-8b94-6cd1-9ee41a14786f
 		summarizeBy: none
 		sourceColumn: month_start
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
 
 	column amount
 		dataType: double
@@ -52,4 +50,3 @@ table Usage
 				    Typed
 
 	annotation PBI_ResultType = Table
-

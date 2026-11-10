@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "72ae7fcb333198a22a17",
   "position": {
     "x": 1540,
     "y": 4,
     "z": 2,
-    "height": 90,
+    "height": 100,
     "width": 340,
     "tabOrder": 2
   },
@@ -28,12 +28,28 @@
               },
               "queryRef": "Months.month",
               "nativeQueryRef": "month",
-              "active": true,
-              "displayName": "Month (none: the whole year)"
+              "displayName": "Month (none: the whole year)",
+              "active": true
             }
           ]
         }
       }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "objects": {
       "data": [
@@ -102,23 +118,7 @@
           }
         }
       ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "drillFilterOtherVisuals": true
+    }
   },
   "annotations": [
     {

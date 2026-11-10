@@ -10,8 +10,6 @@ table Months
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation UnderlyingDateTimeDataType = Date
-
 	column month
 		dataType: string
 		lineageTag: c026b354-acc3-d4ee-391c-2745812844dd
@@ -23,8 +21,8 @@ table Months
 
 	column month_order
 		dataType: int64
-		isHidden
 		formatString: 0
+		isHidden
 		lineageTag: d80ac0f8-e0b7-24e7-0a41-3f15c8a06b5b
 		summarizeBy: none
 		sourceColumn: month_order
@@ -50,4 +48,3 @@ table Months
 				    Source
 
 	annotation PBI_ResultType = Table
-

@@ -9,4 +9,3 @@ relationship fafa8c3c-0d1b-6560-315c-8181543de541
 relationship 65f6c102-d75f-780e-7725-74befe38d7d0
 	fromColumn: Usage.measure
 	toColumn: Utilities.measure
-
